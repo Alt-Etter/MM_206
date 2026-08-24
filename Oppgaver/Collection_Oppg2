@@ -6,7 +6,23 @@
     <title>Document</title>
 </head>
 <body>
+    <span>Length: </span>
+    <input id='myBtn' type="text"/>
+    <button id="myBtn">Convert to cm</button>
+    <h2 id="myText">The result...</h2>
+
+
     <script>
+        let myBtn = document.getElementById('myBtn');
+        let myInput = document.getElementById('myInput');
+        let myText = document.getElementById('myText');
+
+        myBtn.addEventListener('click', function(evt) {
+            let inches = parseFloat(myInput.value);
+            let cm = inches *2.54;
+            myText.innerHTML = inches + 'inches equals ' + cm + 'cm';
+
+        });
 
     </script>
 </body>
