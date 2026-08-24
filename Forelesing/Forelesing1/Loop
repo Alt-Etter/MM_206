@@ -34,9 +34,7 @@
                 ctx.stroke();
             }
 
-        })
-
-        
+        });
 
 
     </script>

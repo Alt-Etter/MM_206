@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //const colors = ['red', 'yelllow', 'blue'];
+        //const myValues = [23, 12, 43, 654];
+
+        /*const myValues = [];
+        myValues.push(23);
+        myValue[0] = 12;
+        myValue[0] = 43;
+        myValue[0] = 654;
+        */
+
+
+        const colors = ['red', 'yelllow', 'blue'];
+        const myValues = [23, 12, 43, 654];
+
+        let numOfElem = myValues.length;
+
+        for (let i = 0; i < numOfElem; i++){
+            let value = myValues[i];
+            console.log(value);
+        };
+
+        
+    </script>
+
+</body>
+</html>
