@@ -6,13 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+
+    <button id="btn1">Click me!</button>
     <script>
         let value = Math.random();
 
         let dice = Math.floor(value * 6 + 1)
         let dice2 = parseInt(value * 6 + 1)
 
-        //functions
+    //functions
         function calculateSum(num1, num2){
             let sum = num1 + num2;
             return sum;
@@ -20,6 +22,39 @@
 
         let result= calculateSum(2,3);
         console.log(result);
+
+    //Arrow function;
+        //function by expretion will not be hoysted
+        const calculateSum = (num1, num2) => {
+            let sum = num1 + num2;
+            return sum;
+        }
+
+        let result2 = calculateSum(2,3);
+        console.log(result2);
+
+    //Arrow can be shortend like this;
+         const calculateSum = (num1, num2) => num1 * num2;
+
+         //Buttons
+         const btn1 = document.getElementById('btn1');
+         btn1.addEventListener('click', buttonClick);
+         console.log("Hi there");
+
+    /* Can be simplefyed to this;
+
+         const btn1 = document.getElementById('btn1');
+         btn1.addEventListener('click', evt => {
+            console.log(evt);
+         });
+        */
+
+        //Arrays,
+
+
+        //Loop Exersise example,
+        
+
 
         
     </script>
