@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Length: </span>
+    <input id='myInput' type="text"/>
+    <button id="inToCmBtn">Inches to cm</button>
+    <button id="cmToInBtn">cm to inches</button>
+    <h2 id="myText">The result...</h2>
+
+    <br><br>
+
+    <span>Temperature: </span>
+    <input id='tempInput' type="text"/>
+    <button id="feetToCmBtn">Fahrenheit to Celsius</button>
+    <button id="cmToFeetBtn">Celsius to Fahrenheit</button>
+    <h2 id="tempText">The result...</h2>
+
+
+    <script>
+        let inToCmBtn = document.getElementById('inToCmBtn');
+        let cmToInBtn = document.getElementById('cmToInBtn');
+        let myInput = document.getElementById('myInput');
+        let myText = document.getElementById('myText');
+
+        inToCmBtn.addEventListener('click', function(evt) {
+            let inches = parseFloat(myInput.value);
+            let cm = inches * 2.54;
+            myText.innerHTML = inches + ' inches equals ' + cm + ' cm';
+        });
+
+        cmToInBtn.addEventListener('click', function(evt) {
+            let cm = parseFloat(myInput.value);
+            let inches = cm / 2.54;
+            myText.innerHTML = cm + ' cm equals ' + inches + ' inches';
+        });
+
+        let feetToCmBtn = document.getElementById('feetToCmBtn');
+        let cmToFeetBtn = document.getElementById('cmToFeetBtn');
+        let tempInput = document.getElementById('tempInput');
+        let tempText = document.getElementById('tempText');
+
+        feetToCmBtn.addEventListener('click', function(evt) {
+            let f = parseFloat(tempInput.value);
+            let c = (f - 32) * 5 / 9;
+            tempText.innerHTML = f + ' F equals ' + c.toFixed(2) + ' C';
+        });
+
+        cmToFeetBtn.addEventListener('click', function(evt) {
+            let c = parseFloat(tempInput.value);
+            let f = c * 9 / 5 + 32;
+            tempText.innerHTML = c + ' C equals ' + f.toFixed(2) + ' F';
+        });
+
+    </script>
+</body>
+</html>

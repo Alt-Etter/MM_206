@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Age Checker</title>
+</head>
+<body>
+    <span>Age: </span>
+    <input id="ageInput" type="text" />
+    <button id="checkBtn">Check</button>
+    <h2 id="resultText">The result...</h2>
+
+    <script>
+        let checkBtn = document.getElementById('checkBtn');
+        let ageInput = document.getElementById('ageInput');
+        let resultText = document.getElementById('resultText');
+
+        checkBtn.addEventListener('click', function() {
+            let age = parseFloat(ageInput.value);
+
+            if (age > 18) {
+                resultText.innerHTML = 'Legal age';
+            } else {
+                resultText.innerHTML = 'Not legal age';
+            }
+        });
+    </script>
+</body>
+</html>

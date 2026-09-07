@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+</head>
+<body>
+    <button id="rollBtn">ROLL THE DICE!!</button>
+    <h2 id="resultText">The result...</h2>
+
+    <script>
+        let rollBtn = document.getElementById('rollBtn');
+        let resultText = document.getElementById('resultText');
+
+        rollBtn.addEventListener('click', function() {
+            let randomNumber = Math.floor(Math.random() * 6) + 1;
+
+            if (randomNumber === 6) {
+                resultText.innerHTML = 'Congratulations, you got a 6!';
+            } else {
+                resultText.innerHTML = randomNumber;
+            }
+        });
+    </script>
+</body>
+</html>

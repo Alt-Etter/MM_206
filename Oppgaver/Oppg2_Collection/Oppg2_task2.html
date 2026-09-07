@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Check</title>
+</head>
+<body>
+    <span>What is the capital of Egypt? </span>
+    <input id="answerInput" type="text" />
+    <button id="checkBtn">Check</button>
+    <h2 id="resultText">The result...</h2>
+
+    <script>
+        let checkBtn = document.getElementById('checkBtn');
+        let answerInput = document.getElementById('answerInput');
+        let resultText = document.getElementById('resultText');
+
+        checkBtn.addEventListener('click', function() {
+            let answer = answerInput.value.toLowerCase();
+
+            if (answer === 'cairo') {
+                resultText.innerHTML = 'Correct!';
+            } else {
+                resultText.innerHTML = 'Wrong answer';
+            }
+        });
+    </script>
+</body>
+</html>

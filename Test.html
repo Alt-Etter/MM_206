@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit Converter</title>
+</head>
+
+    <body>
+
+    <h1>Unit Converter</h1>
+
+    <h2>Length</h2>
+
+    <span>Enter a number: </span>
+    <input id="myInput" type="text">
+
+    <br><br>
+    <button id="inchesToCm">Inches to cm</button>
+    <button id="cmToInches">Cm to inches</button>
+    <h3 id="lengthResult">The result...</h3>
+
+
+    <h2>Temperature</h2>
+    <span>Enter a temperature: </span>
+    <input id="temperatureInput" type="text">
+
+    <br><br>
+    <button id="fahrenheitToCelsius">Fahrenheit to Celsius</button>
+    <button id="celsiusToFahrenheit">Celsius to Fahrenheit</button>
+
+    <h3 id="temperatureResult">The result...</h3>
+
+    <script>
+        // Get the buttons and input boxes
+        let inchesToCm = document.getElementById("inchesToCm");
+        let cmToInches = document.getElementById("cmToInches");
+        let myInput = document.getElementById("myInput");
+        let lengthResult = document.getElementById("lengthResult");
+
+        // Convert inches to cm
+        inchesToCm.addEventListener("click", function() {
+            let inches = parseFloat(myInput.value);
+            let cm = inches * 2.54;
+            lengthResult.innerHTML = inches + " inches equals "
+                + cm.toFixed(2) + " cm";
+
+        });
+
+
+        // Convert cm to inches
+        cmToInches.addEventListener("click", function() {
+            let cm = parseFloat(myInput.value);
+            let inches = cm / 2.54;
+            lengthResult.innerHTML = cm + " cm equals "
+                + inches.toFixed(2) + " inches";
+
+        });
+
+
+        //the temperature buttons and input
+        let fahrenheitToCelsius =
+            document.getElementById("fahrenheitToCelsius");
+        let celsiusToFahrenheit =
+            document.getElementById("celsiusToFahrenheit");
+        let temperatureInput =
+            document.getElementById("temperatureInput");
+        let temperatureResult =
+            document.getElementById("temperatureResult");
+
+
+        // Convert Fahrenheit to Celsius
+        fahrenheitToCelsius.addEventListener("click", function() {
+            let fahrenheit = parseFloat(temperatureInput.value);
+            let celsius = (fahrenheit - 32) * 5 / 9;
+            temperatureResult.innerHTML =
+                fahrenheit + " Fahrenheit equals "
+                + celsius.toFixed(2) + " Celsius";
+
+        });
+
+
+        // Convert Celsius to Fahrenheit
+        celsiusToFahrenheit.addEventListener("click", function() {
+            let celsius = parseFloat(temperatureInput.value);
+            let fahrenheit = celsius * 9 / 5 + 32;
+            temperatureResult.innerHTML =
+                celsius + " Celsius equals "
+                + fahrenheit.toFixed(2) + " Fahrenheit";
+                
+        });
+
+    </script>
+</body>
+</html>
