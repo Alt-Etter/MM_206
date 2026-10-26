@@ -14,7 +14,7 @@
             for (let i = 1; i <= 10; i++) {
                 let myH2 = document.createElement("h2");
                 myH2.innerHTML = i + ': This is h2-element ' + i;
-                // pick a random hue between 0 and 360
+                // pick a random color between 0 and 360
                 let hue = Math.floor(Math.random() * 361);
                 myH2.style.color = "hsl(" + hue + ", 100%, 50%)";
                 document.body.appendChild(myH2);
