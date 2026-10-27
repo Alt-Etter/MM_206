@@ -5,7 +5,7 @@ const ctx = canvas.getContext("2d");
 const radiusInput = document.getElementById("radius");
 const colorInput = document.getElementById("color");
 
-// All circles are stored in an array. The last one is the newest.
+// array for circles, last in first out
 let circles = [];
 
 function drawAll() {
@@ -21,9 +21,9 @@ function drawAll() {
   }
 }
 
-// Returns the newest circle that contains the point, or null
+// Prints the newest circle
 function findCircle(x, y) {
-  // Loop from the end so we find the newest circle first
+  // Loop to find newest circle first
   for (let i = circles.length - 1; i >= 0; i--) {
     const c = circles[i];
     const dx = x - c.x;
@@ -38,7 +38,7 @@ function findCircle(x, y) {
 }
 
 canvas.addEventListener("click", function (event) {
-  // Position of the click inside the canvas
+  // place of the click inside the canvas
   const rect = canvas.getBoundingClientRect();
   const x = event.clientX - rect.left;
   const y = event.clientY - rect.top;

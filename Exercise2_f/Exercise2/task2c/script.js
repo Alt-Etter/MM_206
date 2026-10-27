@@ -1,4 +1,4 @@
-// Task 2c - Drag a car and drop it on the garbage bin
+// Task 2c - Drag n drop it to the garbage bin
 
 let cars = ["Volvo", "Peugeot", "Citroen", "Porche", "Skoda"];
 
@@ -16,11 +16,11 @@ function showCars() {
     const name = document.createElement("span");
     name.textContent = cars[i];
 
-    // Only for show, nothing happens when you click it
+    //Only for show, again
     const editButton = document.createElement("button");
     editButton.textContent = "Edit";
 
-    // When the drag starts we store which index we are dragging
+    //drag starts and store which index is dragging
     div.addEventListener("dragstart", function (event) {
       event.dataTransfer.setData("text/plain", i);
     });
@@ -31,7 +31,7 @@ function showCars() {
   }
 }
 
-// The bin must allow dropping (preventDefault on dragover)
+//the event that enebels and recognices that something is draged over
 bin.addEventListener("dragover", function (event) {
   event.preventDefault();
   bin.classList.add("over");
@@ -41,7 +41,7 @@ bin.addEventListener("dragleave", function () {
   bin.classList.remove("over");
 });
 
-// When we drop: read the index, remove the car and show the list again
+// After drop; read the index, remove the car, show the list again
 bin.addEventListener("drop", function (event) {
   event.preventDefault();
   bin.classList.remove("over");
