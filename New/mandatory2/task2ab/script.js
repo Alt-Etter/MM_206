@@ -18,13 +18,9 @@ function showCars() {
     const editButton = document.createElement("button");
     editButton.textContent = "Edit";
     editButton.addEventListener("click", function () {
-      const newName = prompt("Enter new car name:", cars[index]);
-
-      if (newName !== null) {
-        cars[index] = newName;
-        showCars();
-      }
+      console.log("Edit button clicked..");
     });
+
     //Delete button
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
@@ -35,6 +31,7 @@ function showCars() {
       showCars();
     });
 
+    //Looks
     buttons.appendChild(editButton);
     buttons.appendChild(deleteButton);
 
