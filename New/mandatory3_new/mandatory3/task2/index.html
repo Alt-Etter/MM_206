@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helseflora</title>
+  <style>
+    body {
+      margin: 0;
+      background: #cfd8d2;
+      font-family: Arial, sans-serif;
+    }
+    /* The three views are custom elements. Only one is visible at a time */
+    category-view, plant-list-view, plant-detail-view {
+      display: block;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+    [hidden] {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <category-view id="categories"></category-view>
+  <plant-list-view id="plantlist" hidden></plant-list-view>
+  <plant-detail-view id="plantdetail" hidden></plant-detail-view>
+
+  <script type="module" src="main.mjs"></script>
+</body>
+</html>

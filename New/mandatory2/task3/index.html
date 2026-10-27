@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 3 - Click to draw circles</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    canvas { border: 1px solid #999; display: block; }
+    #controls { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Click on the canvas to draw a circle</h2>
+  <canvas id="canvas" width="500" height="500"></canvas>
+
+  <div id="controls">
+    <label>Radius: <input type="range" id="radius" min="5" max="60" value="25"></label>
+    <label>Color: <input type="color" id="color" value="#ff0000"></label>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

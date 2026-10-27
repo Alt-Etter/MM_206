@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2c - Drag to the bin</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    #container { width: 400px; border: 1px solid #999; background: #f5fcff; }
+    .car {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 6px;
+      border-bottom: 1px solid #999;
+      cursor: grab;
+    }
+    #bin {
+      width: 400px;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 60px;
+      border: 2px dashed #999;
+    }
+    #bin.over { background: #ffd6d6; }
+  </style>
+</head>
+<body>
+  <h2>Cars</h2>
+  <div id="container"></div>
+
+  <!-- The garbage bin. You can replace the emoji with an <img src="bin.png"> if you want a real image -->
+  <div id="bin">🗑️</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
